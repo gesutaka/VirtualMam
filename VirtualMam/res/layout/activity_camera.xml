@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.VirtualMam.activity.CameraSurfaceView
+        android:id="@+id/camera_cameraPreView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true" />
+
+    <com.VirtualMam.activity.OverlayImageView
+        android:id="@+id/camera_cameraOverlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true" />
+
+    <ImageView
+        android:id="@+id/camera_focusView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/seeking_focus" />
+    
+    <AbsoluteLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+	    <ImageView
+	        android:id="@+id/camera_zoomBaseView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/zoom_base" />
+	    
+	    <ImageView
+	        android:id="@+id/camera_zoomToggleView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/zoom_toggle" />
+	    
+	    <TextView
+	        android:id="@+id/camera_zoomSetting"
+	        android:text="     "
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#FFFF" />
+    
+    </AbsoluteLayout>
+    
+    <TextView
+        android:id="@+id/camera_cameraSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFF" />
+    
+    <ImageView
+        android:id="@+id/camera_cameraShutter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:src="@layout/shutter_button" />
+
+</RelativeLayout>
